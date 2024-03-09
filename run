@@ -1,0 +1,8 @@
+#!/bin/bash
+
+CC=$(which cc)
+output='tmptest'
+#compile and test the thing
+
+$CC -Wall -Werror -Wextra $@ -o $output &&\
+	./$output && rm $output
